@@ -1,0 +1,168 @@
+/* Common elements */
+
+body {
+  font-size: 16px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: black;
+  font-weight: 250;
+}
+
+h1 {
+  font-size: 3rem;
+  font-weight: 500;
+}
+
+p {
+  font-size: 3rem;
+  font-weight: 400; 
+} 
+
+/* App component */
+
+.App {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+  background: linear-gradient(90deg, rgba(23, 24, 31,1) 0%, rgba(23, 24, 31,1) 100%);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  font-size: 3rem;
+  font-weight: 500;
+}
+
+/* Título */
+#title {
+  position: absolute;
+  top: 2%;
+  color: rgba(108, 114, 203, 1);
+  text-shadow: 0.5px 0.5px rgba(248, 250, 251, 0.8);
+}
+
+@media only screen and (max-width: 850px) {
+  #title {
+    top: 2%;
+    color: rgba(108, 114, 203, 1);
+    text-shadow: 0.5px 0.5px rgba(248, 250, 251, 0.8);
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  #title {
+    top: 3%;
+  }
+}
+
+/* Tablero component */
+
+.tablero {
+  position: absolute;
+  top: 14%;
+  display: grid;
+  grid-template-areas: "box1 box2 box3"
+                       "box4 box5 box6"
+                       "box7 box8 box9";
+  grid-template: repeat(3fr) / repeat(3fr);
+  width: 50%;
+  height: auto;
+  gap: 2%;
+  justify-content: center;
+  align-items: center;
+}
+
+@media only screen and (max-width: 850px) {
+  .tablero {
+    top: 17%;
+    width: 90%;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  .tablero {
+    top: 22%;
+    width: 95%;
+  }
+}
+
+/* Casilla component */
+
+.box {
+  display: flex;
+  justify-content: center;
+  border: 2px solid rgba(248, 250, 251, 0.8);
+  width: 10rem;
+  height: 10rem;
+  border-radius: 30px;
+  background: linear-gradient(90deg, rgba(108, 114, 203, 0.5) 0%, rgba(166,109,197, 0.5) 79%, rgba(203,105,193, 0.5) 100%);
+  box-shadow: -7px 7px 10px rgba(248, 250, 251, 0.4);
+  color: rgba(248, 250, 251, 1);
+  font-size: 120px;
+}
+
+.box span {
+  display: none;
+  text-shadow: 1px 1px rgba(248, 250, 251, 0.8);
+}
+
+@media only screen and (max-width: 850px) {
+  .box {
+    width: 12rem;
+    height: 12rem;
+    border-radius: 30px;
+    font-size: 145px;
+  }
+}
+@media only screen and (max-width: 450px) {
+  .box {
+    border: 1.25px solid rgba(248, 250, 251, 0.8);
+    width: 7rem;
+    height: 7rem;
+    border-radius: 17px;
+    font-size: 85px;
+  }
+}
+
+
+/* Button for playing again */
+
+.buttonPlay {
+  position: relative;
+  top: 43%;
+  margin-left: 18%;
+  padding: 1rem;
+  width: 16%;
+  height: auto;
+  background: linear-gradient(90deg, rgba(108, 114, 203, 0.5) 0%, rgba(166, 109, 197, 0.5) 79%, rgba(203, 105, 193, 0.5) 100%);
+  border: 1px solid rgba(248, 250, 251, 1);
+  border-radius: 15px;
+  color: rgba(248, 250, 251, 1);
+  font-size: 1.75rem;
+}
+
+.buttonPlay:hover {
+  scale: 1.05;
+  transition-duration: 1.25s;
+  background-color: white;
+  color: rgba(23, 24, 31, 1);
+  border-color: rgba(108, 114, 203, 1); 
+}
+
+@media only screen and (max-width: 850px) {
+  .buttonPlay {
+    top: 35%;
+    margin-left: 45%;
+    width: 30%;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  .buttonPlay {
+    top: 30%;
+    margin-left: 0%;
+    width: 50%;
+    border-radius: 12px;
+  }
+}
